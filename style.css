@@ -1,0 +1,641 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: auto;
+  font-family: "Josefin Sans", sans-serif;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+}
+body.active {
+  overflow-y: inherit;
+}
+p {
+  color: #556068;
+}
+
+/*****************************header********************************/
+/*******************************************************************/
+.header-row {
+  height: 160px;
+}
+.text-logo {
+  font-size: 20px;
+}
+.image-logo {
+  width: 110px;
+}
+
+.paper-plane {
+  cursor: pointer;
+  height: 15px;
+}
+.logo-name h1 {
+  font-family: "Josefin Sans", sans-serif;
+  color: #9bbb59;
+  font-size: 45px;
+}
+
+.email-input {
+  height: 40px;
+  box-shadow: inset 0px 0px 10px rgb(212, 212, 212);
+  border: none;
+
+  opacity: 0.5;
+}
+
+.paper-plane-check {
+  background-color: goldenrod;
+  padding-left: 3px;
+}
+.paper-plane-check:hover {
+  background-color: rgb(143, 136, 119);
+}
+/************************nav-bar************************************/
+/*******************************************************************/
+
+nav {
+  height: auto;
+  border-top: 1px solid silver;
+  border-bottom: 1px solid silver;
+}
+
+nav ul li {
+  list-style-type: none;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  color: #556068;
+  height: 50px;
+}
+nav a {
+  text-decoration: none;
+  color: #556068;
+  font-size: 18px;
+  margin: 10px;
+}
+nav a:hover {
+  color: #9bbb59;
+}
+.link-accueil a {
+  color: rgb(211, 150, 59);
+}
+.fleche-nav {
+  width: 10px;
+}
+/******************************sub-menu*****************************/
+/*******************************************************************/
+.container-sub-menu {
+  position: relative;
+}
+.sub-menu {
+  display: none;
+  width: 200%;
+  height: 50px;
+  padding-left: 0px;
+}
+.sub-menu li {
+  border: 1px solid silver;
+  background-color: white;
+  padding: 5px;
+}
+
+.container-sub-menu:hover .sub-menu {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  display: block;
+}
+/*******************appointment section*****************************/
+/*******************************************************************/
+
+.section-container {
+  background: url(./image/fond.webp) center center no-repeat fixed;
+  background-size: cover;
+  height: auto;
+  width: 100%;
+}
+.col-cont-rdv {
+  background-color: #ecececb0;
+  margin: 60px 0px;
+}
+.box-container {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(248, 237, 218, 0);
+}
+.rdv-content {
+  width: fit-content;
+  height: auto;
+  padding: 45px;
+  border: 1px solid rgb(211, 150, 59);
+  background-color: rgb(255, 255, 255);
+}
+
+/******************************logo-phone***************************/
+/*******************************************************************/
+.phone-img img {
+  width: 20px;
+}
+
+/*******************************btn-appointment*********************/
+/*******************************************************************/
+.btn-rdv {
+  background-color: rgb(211, 150, 59);
+  color: white;
+}
+
+.titre-rdv {
+  color: rgb(211, 150, 59);
+  font-size: 45px;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.btn-rdv:hover {
+  transform: scale(1.05);
+}
+/*****************************main section**************************/
+/*******************************************************************/
+
+.container-general-accueil {
+  background: url(./image/petit-dejeuner-healthy-traiteur-animation-paris-600x800.jpg)
+    center no-repeat;
+  background-size: 650px;
+  background-position: right;
+  background-position-x: 88%;
+  background-position-y: 10%;
+}
+.accueil {
+  background-color: rgb(214, 214, 214);
+  opacity: 0.8;
+  color: #9bbb59;
+  border-bottom: 2px solid rgb(145, 145, 145);
+}
+
+.accueil-container {
+  border: 1px solid silver;
+  margin: 200px 0px !important;
+  background-color: rgba(255, 255, 255, 0);
+  z-index: 2;
+  transform: translateX(-100%);
+  opacity: 0;
+}
+.accueil-container h3 {
+  font-family: "Josefin Sans", sans-serif;
+  line-height: 80px;
+  padding: 40px 40px 0px 40px;
+  margin-bottom: -20px;
+  font-size: 45px;
+}
+.image-accueil {
+  top: 170px;
+  left: 1000px;
+  width: 400px;
+}
+
+.accueil-container.active {
+  transform: translateX(0);
+  transition: all 2s;
+  opacity: 1;
+}
+/*******************************section-why*************************/
+/*******************************************************************/
+.pkoi-container {
+  background: url(./image/Carrot-and-ginger-soup-with-marmite-croutons-1-900x900.jpg)
+    center no-repeat;
+  height: 100vh;
+  margin-top: 90px;
+}
+.pkoi-content {
+  background-color: rgba(240, 248, 255, 0);
+  border: 2px solid rgb(211, 150, 59);
+  opacity: 0;
+  transform: translateX(120%);
+}
+.pkoi-content.active {
+  transform: translateX(0%);
+  transition: all 2s;
+  opacity: 1;
+}
+
+.pkoi-titre {
+  font-size: 45px;
+  font-family: "Josefin Sans", sans-serif;
+  color: rgb(211, 150, 59);
+  line-height: 70px;
+}
+
+/*******************************input-section-why*******************/
+/*******************************************************************/
+.input-pkoi {
+  background-color: #b3da65;
+  color: white;
+}
+
+.input-pkoi:hover {
+  transform: scale(1.05);
+}
+
+/************************information container**********************/
+/*******************************************************************/
+.rensei-cont-general {
+  margin-top: 100px;
+}
+.reseignement-titre h2 {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 3.3rem;
+}
+.rensei-logo img {
+  width: 200px;
+}
+.rensei_titre img {
+  width: 200px;
+}
+.logo-phone-rensei img {
+  width: 25px;
+}
+.rensei-text {
+  color: #556068;
+}
+.lieu {
+  text-align: justify;
+}
+.box-phone-rensei img {
+  width: 15px;
+}
+
+#Asavoir,
+#Acceder,
+#Prendre {
+  filter: opacity(0);
+}
+
+/**************************animated appearance**********************/
+/*******************************************************************/
+#Asavoir.active {
+  filter: opacity(1);
+  transition: ease 6s;
+}
+#Acceder.active {
+  filter: opacity(1);
+  transition: ease 5s;
+}
+#Prendre.active {
+  filter: opacity(1);
+  transition: ease 3s;
+}
+
+/******************************footer*******************************/
+/*******************************************************************/
+.footer-logo {
+  width: 120px;
+}
+.footer-container {
+  background-color: #304250;
+  margin-top: 100px;
+  color: white;
+}
+.footer-container p {
+  color: white;
+  font-size: 15px;
+}
+.footer-titre-nav {
+  color: rgb(152, 212, 212);
+  font-size: 20px;
+}
+.footer-titre-nav h3 {
+  color: rgb(152, 212, 212);
+  font-size: 25px;
+  font-family: "Josefin Sans", sans-serif;
+}
+.Coordonnees-box img {
+  width: 55px;
+}
+.footer-link-nav a {
+  text-decoration: none;
+  color: white;
+}
+
+.footer-link-nav ul li img {
+  width: 15px;
+}
+.footer-horaire p {
+  color: white;
+}
+
+.sociale-img1,
+.sociale-img2 {
+  border-radius: 15px;
+  width: 50px !important;
+}
+
+.sociale-img1:hover {
+  background-color: rgb(78, 78, 241) !important;
+}
+.sociale-img2:hover {
+  background-color: rgb(255, 0, 0) !important;
+  color: white;
+}
+
+#arrow img {
+  transform: rotate(-90deg);
+  width: 40px;
+  background-color: #556068;
+  border-radius: 5px;
+  position: fixed;
+  z-index: 1000;
+  padding: 8px;
+  right: 20px;
+  bottom: 75px;
+  border: 1px solid white;
+}
+#arrow {
+  display: none;
+}
+#arrow.active {
+  display: block;
+}
+#arrow img:hover {
+  background-color: rgb(211, 150, 59);
+}
+.droit-text img {
+  width: 100px;
+}
+
+.connexion a {
+  color: #556068a8;
+}
+
+/**************************btn-burger*******************************/
+/*******************************************************************/
+.btn-burger {
+  position: fixed;
+  top: 30px;
+  right: 30px;
+  padding: 3px 7px 9px 7px;
+  background-color: #415869;
+  display: inline-block;
+  border-radius: 2px;
+  width: auto;
+  cursor: pointer;
+  transition: all 0.3s;
+  z-index: 20;
+  display: none;
+}
+.bar1,
+.bar2,
+.bar3 {
+  background-color: rgb(255, 255, 255);
+  width: 35px;
+  height: 6px;
+  margin-top: 6px;
+  border-radius: 2px;
+  transform: translateX(0);
+}
+.btn-burger.active {
+  transform: translateX(-268px);
+  border-radius: 2px 0px 0px 2px;
+  background-color: rgb(211, 150, 59);
+}
+.mouve .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 8px);
+  transform: rotate(-45deg) translate(-9px, 8px);
+}
+.mouve .bar2 {
+  opacity: 0;
+}
+.mouve .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -10px);
+  transform: rotate(45deg) translate(-8px, -10px);
+}
+
+/**************************nav-burger*******************************/
+/*******************************************************************/
+.nav-burger {
+  position: fixed;
+  top: 0;
+  width: 300px;
+  text-transform: uppercase;
+  background-color: #556068;
+  margin: 0%;
+  padding: 0;
+  right: 0;
+  z-index: 20;
+  transform: translateX(100%);
+  transition: all 0.3s;
+  display: none;
+}
+.nav-burger.active {
+  transform: translateX(0);
+}
+.nav-burger ul {
+  position: fixed;
+  top: 0;
+  width: 300px;
+  text-transform: uppercase;
+  margin: 0%;
+  padding: 0;
+}
+
+.nav-burger li {
+  background-color: #415869;
+  color: rgb(255, 255, 255);
+  border-bottom: 2px solid silver;
+  border-right: 2px solid silver;
+}
+.nav-burger li:hover {
+  background-color: rgb(211, 150, 59);
+}
+.nav-burger a {
+  font-size: 15px;
+  color: white;
+}
+.nav-burger a:hover {
+  color: rgb(251, 251, 251);
+}
+.nav-burger .acceuil-burger {
+  background-color: rgb(211, 150, 59);
+}
+.bar-symbole {
+  width: 25%;
+  display: flex;
+  justify-content: center;
+  padding: 2px;
+  font-size: 50px;
+  cursor: pointer;
+}
+.bar-negative {
+  display: flex;
+}
+.bar-positive {
+  display: none;
+}
+.bar-positive.active {
+  display: flex;
+}
+.bar-negative.active {
+  display: none;
+}
+.symboles1 {
+  width: 75%;
+}
+
+/******************************nav-burger sub-menu*************************/
+/**************************************************************************/
+.burger-sub-menu2,
+.burger-sub-menu {
+  display: none;
+}
+.burger-sub-menu.active,
+.burger-sub-menu2.active {
+  display: flex;
+}
+
+/******************************bloc-popup**********************************/
+/**************************************************************************/
+.popup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: #30425098;
+  position: fixed;
+  z-index: 2000;
+}
+.popupContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  padding: 5px;
+  background-color: white;
+  position: relative;
+  z-index: 2000;
+}
+
+.crossCheck {
+  position: absolute;
+  cursor: pointer;
+  right: 15px;
+  top: -15px;
+}
+.crossCheck img {
+  position: absolute;
+  width: 30px;
+}
+.infoPopup {
+  display: flex;
+  justify-content: center;
+  border-bottom: 2px solid rgba(192, 192, 192, 0.767);
+  width: 100%;
+}
+.popupRdv span {
+  color: rgb(211, 150, 59);
+}
+.display {
+  display: none;
+}
+
+/*****************************media queris*********************************/
+/**************************************************************************/
+
+@media screen and (max-width: 1400px) {
+  .btn-burger {
+    display: block;
+  }
+  .nav-burger {
+    display: block;
+  }
+  .nav-principal {
+    display: none;
+  }
+  /*****************header**************/
+  .logo-container {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .btn-burger {
+    display: block;
+  }
+  .nav-burger {
+    display: block;
+  }
+  .nav-principal {
+    display: none;
+  }
+  /*****************header**************/
+  .logo-container {
+    display: none !important;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .btn-burger {
+    display: block;
+  }
+  .nav-burger {
+    display: block;
+  }
+  .nav-principal {
+    display: none;
+  }
+  /*****************header**************/
+  .box-email {
+    display: none !important;
+  }
+  .popup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: #30425098;
+    position: fixed;
+    z-index: 2000;
+  }
+  .popupContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    padding: 5px;
+    background-color: white;
+    position: relative;
+    z-index: 2000;
+  }
+
+  .crossCheck {
+    position: absolute;
+    cursor: pointer;
+    right: 15px;
+    top: -15px;
+  }
+  .crossCheck img {
+    position: absolute;
+    width: 30px;
+  }
+  .infoPopup {
+    display: flex;
+    justify-content: center;
+    border-bottom: 2px solid rgba(192, 192, 192, 0.767);
+    width: 100%;
+  }
+  .popupRdv span {
+    color: rgb(211, 150, 59);
+  }
+  .display {
+    display: none;
+  }
+}
